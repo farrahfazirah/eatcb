@@ -1,0 +1,14 @@
+{
+  "name": "which-shop-open",
+  "version": "1.0.0",
+  "description": "Up-to-date information on shops that still deliver during circuit breaker measures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Farrah Fazirah",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
