@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 		<title>Shop Circuit Breaker</title>
 	</head>
 	<body>
@@ -22,237 +23,124 @@
 
 <div class="container">
 	<div align="center">
-		<select name="sort-news" id="sort-news">
-			<option value="All">All</option>
-			<option value="furniture">Furniture</option>
-			<option value="food">Food</option>
-			<option value="tech">Tech</option>
-			<option value="ef">Environmentally-Friendly 💚</option>
-			<option value="pets">For Pets</option>
-		</select>
+		<div class="mb-3 filters-button-group">
+			<button class="m-1 btn btn-outline-primary is-checked" data-filter="*">All</button>
+			<button class="m-1  btn btn-outline-primary" data-filter=".furniture">Furniture</button>
+			<button class="m-1  btn btn-outline-primary" data-filter=".tech">Tech</button>
+			<button class="m-1 btn btn-outline-primary" data-filter=".pets">For Pets</button>
+		</div>
+	</div>
+
+
+<div class="grid">
+	<div class="card furniture card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/2661/6120/t/26/assets/pf-78c0a8dd-13e2-412a-86e8-534dcc46f3fa--1stimage.png?4120);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="img/omnidesk.png" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">Omnidesk</h4>
+			<p class="card-text">Customizable gaming desks</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="https://theomnidesk.com/" class="btn btn-primary btn-lg btn-block" >Shop</a>
+		</div>
+	</div>
+	<div class="card furniture card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://www-noahome-com.exactdn.com/wp-content/uploads/2019/07/noa-firmness-video.jpg?strip=all&lossy=1&quality=100&resize=579%2C348&ssl=1);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="img/noa.png" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">NOA Mattress</h4>
+			<p class="card-text">Mattresses, bed frames and sofas</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="https://www.noahome.com/" class="btn btn-primary btn-lg btn-block">Shop</a>
+		</div>
+	</div>
+	<div class="card tech card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/1595/6213/files/55-Product-Page_11_fdb95f6b-90d4-47b0-854a-38bc0ecf9928_1090x1090_crop_top@2x.jpg?v=1574161427);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="img/prism.png" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">PRISM+</h4>
+			<p class="card-text">Monitors, monitor arms, smart TVs and TV stands</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="https://prismplus.sg/" class="btn btn-primary btn-lg btn-block">Shop</a>
+		</div>
+	</div>
+	<div class="card tech card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://www.gaincity.com/pub/media/wysiwyg/gaincity_building.png);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="img/gaincity.png" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">Gain City</h4>
+			<p class="card-text">Retailer for consumer electronics</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="hhttps://www.gaincity.com/" class="btn btn-primary btn-lg btn-block">Shop</a>
+		</div>
+	</div>
+	<div class="card furniture card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://res.cloudinary.com/castlery/image/upload/w_1080,f_auto,q_auto/static/launch/grandstand3.jpg);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="img/castlery.png" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">Castlery</h4>
+			<p class="card-text">Online furniture store</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="https://www.castlery.com/" class="btn btn-primary btn-lg btn-block">Shop</a>
+		</div>
+	</div>
+	<div class="card furniture card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+		<div class="card-custom-img" style="background-image: url(https://hipvan-images-production.imgix.net/taxon-images/7121ee54-7405-409b-b700-43146ab03f26/Sideboard.png?fit=fill&h=400&w=400&bg=ffffff&cs=srgb&auto=format);"></div>
+		<div class="card-custom-avatar">
+			<img class="img-fluid" style="background-color: #FFF;" src="data:image/png;base64,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" alt="Avatar" />
+		</div>
+		<div class="card-body" style="overflow-y: auto">
+			<h4 class="card-title">HipVan</h4>
+			<p class="card-text">Online furniture store</p>
+		</div>
+		<div class="card-footer" style="background: inherit; border-color: inherit;">
+			<a target=”_blank” href="https://www.hipvan.com/" class="btn btn-primary btn-lg btn-block">Shop</a>
+		</div>
+	</div>
+
+<div class="card furniture card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+	<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/0759/1515/t/365/assets/home-feature-chair-min.png?v=1383013464975333398);"></div>
+	<div class="card-custom-avatar">
+		<img class="img-fluid" style="background-color: #FFF;" src="https://media.glassdoor.com/sqll/1835193/secretlab-squarelogo-1549604350232.png" alt="Avatar" />
+	</div>
+	<div class="card-body" style="overflow-y: auto">
+		<h4 class="card-title">Secretlab</h4>
+		<p class="card-text">Gaming chairs</p>
+	</div>
+	<div class="card-footer" style="background: inherit; border-color: inherit;">
+		<a target=”_blank” href="https://www.secretlab.sg" class="btn btn-primary btn-lg btn-block">Shop</a>
 	</div>
 </div>
 
-
-<section class="news-list">
-	<div class="container">
-				<article class="news-item show-more-item" data-category="furniture">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/2661/6120/t/26/assets/pf-78c0a8dd-13e2-412a-86e8-534dcc46f3fa--1stimage.png?4120);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="img/omnidesk.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Omnidesk</h4>
-							<p class="card-text">Customizable gaming desks</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://theomnidesk.com/" class="btn btn-primary btn-lg btn-block" >Shop Omnidesk</a>
-						</div>
-					</div>
-				</article>
-
-
-
-				<article class="news-item show-more-item" data-category="furniture">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://www-noahome-com.exactdn.com/wp-content/uploads/2019/07/noa-firmness-video.jpg?strip=all&lossy=1&quality=100&resize=579%2C348&ssl=1);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="img/noa.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">NOA Mattress</h4>
-							<p class="card-text">Mattresses, bed frames and sofas</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.noahome.com/" class="btn btn-primary btn-lg btn-block">Shop NOA Mattress</a>
-						</div>
-					</div>
-				</article>
-
-				<article class="news-item show-more-item" data-category="tech">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/1595/6213/files/55-Product-Page_11_fdb95f6b-90d4-47b0-854a-38bc0ecf9928_1090x1090_crop_top@2x.jpg?v=1574161427);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="img/prism.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">PRISM+</h4>
-							<p class="card-text">Monitors, monitor arms, smart TVs and TV stands</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://prismplus.sg/" class="btn btn-primary btn-lg btn-block">Shop PRISM+</a>
-						</div>
-					</div>
-				</article>
-
-												<article class="news-item show-more-item" style="display: none;" data-category="tech">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://www.gaincity.com/pub/media/wysiwyg/gaincity_building.png);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="img/gaincity.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Gain City</h4>
-							<p class="card-text">Retailer for consumer electronics</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="hhttps://www.gaincity.com/" class="btn btn-primary btn-lg btn-block">Shop Gain City</a>
-						</div>
-					</div>
-				</article>
-
-								<article class="news-item show-more-item" style="display: none;" data-category="furniture">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://res.cloudinary.com/castlery/image/upload/w_1080,f_auto,q_auto/static/launch/grandstand3.jpg);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="img/castlery.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Castlery</h4>
-							<p class="card-text">Online furniture store</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.castlery.com/" class="btn btn-primary btn-lg btn-block">Shop Castlery</a>
-						</div>
-					</div>
-				</article>
-
-												<article class="news-item show-more-item" style="display: none;" data-category="furniture">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://hipvan-images-production.imgix.net/taxon-images/7121ee54-7405-409b-b700-43146ab03f26/Sideboard.png?fit=fill&h=400&w=400&bg=ffffff&cs=srgb&auto=format);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="data:image/png;base64,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" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">HipVan</h4>
-							<p class="card-text">Online furniture store</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.hipvan.com/" class="btn btn-primary btn-lg btn-block">Shop HipVan</a>
-						</div>
-					</div>
-				</article>
-
-
-								<article class="news-item show-more-item" style="display: none;" data-category="food">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://scontent.fsin9-1.fna.fbcdn.net/v/t1.0-9/80832986_2584566991778201_3470552798888722432_o.jpg?_nc_cat=102&_nc_sid=2d5d41&_nc_ohc=WjN3oTMnDooAX9j2l17&_nc_ht=scontent.fsin9-1.fna&oh=54bea7c76df09e4500a1cef949d46e3d&oe=5EAF61F1);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="https://scontent.fsin9-1.fna.fbcdn.net/v/t31.0-8/11312823_1642018159366427_8038312183755379571_o.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=BbIWDV8C-7EAX9VbAmg&_nc_ht=scontent.fsin9-1.fna&oh=5d8fdfea9de0f6aafdcc9700283c328e&oe=5EAF5BCD" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">TIGA Folks & Co. (HALAL)</h4>
-							<p class="card-text">Satay and grilled food</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.instagram.com/tigafolksnco/?hl=en" class="btn btn-primary btn-lg btn-block">Shop TIGA Folks & Co.</a>
-						</div>
-					</div>
-				</article>
-
-								<article class="news-item show-more-item" style="display: none;" data-category="food">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://static.wixstatic.com/media/bdfc6e_5425040a8e454aef83c04b3ce4ea51ad.jpg/v1/fill/w_980,h_443,al_c,q_85/bdfc6e_5425040a8e454aef83c04b3ce4ea51ad.webp);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="https://static.wixstatic.com/media/bdfc6e_3af988981f1d496e8d3673c10170acaf.png/v1/fill/w_171,h_165,al_c,q_85,usm_0.66_1.00_0.01/bdfc6e_3af988981f1d496e8d3673c10170acaf.webp" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Fika Cafe (HALAL)</h4>
-							<p class="card-text">Swedish food</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.fikacafe.com" class="btn btn-primary btn-lg btn-block">Shop Fika Cafe</a>
-						</div>
-					</div>
-				</article>
-
-								<article class="news-item show-more-item" style="display: none;" data-category="furniture">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://cdn.shopify.com/s/files/1/0759/1515/t/365/assets/home-feature-chair-min.png?v=1383013464975333398);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="https://media.glassdoor.com/sqll/1835193/secretlab-squarelogo-1549604350232.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Secretlab</h4>
-							<p class="card-text">Gaming chairs</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.secretlab.sg" class="btn btn-primary btn-lg btn-block">Shop SecretLab</a>
-						</div>
-					</div>
-				</article>
-
-												<article class="news-item show-more-item" style="display: none;" data-category="food ef">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://scontent.fsin9-2.fna.fbcdn.net/v/t1.0-9/67575657_2406643022938644_3886276977119723520_o.jpg?_nc_cat=110&_nc_sid=6e5ad9&_nc_ohc=yTBbQW1wNvEAX-w5OOF&_nc_ht=scontent.fsin9-2.fna&oh=cc8fd0bbb2c71a788673c77160a12153&oe=5EB135F1);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #FFF;" src="https://scontent.fsin9-2.fna.fbcdn.net/v/t31.0-8/11103212_1588416771427944_8812271404172884635_o.jpg?_nc_cat=109&_nc_sid=85a577&_nc_ohc=LT6J7ovqCvQAX88cWcM&_nc_ht=scontent.fsin9-2.fna&oh=a47b532c7b4b9ec8472f8bd5dd068937&oe=5EB07635" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Shin Gi Tai</h4>
-							<p class="card-text">Cocktails</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.facebook.com/shingitaibar/" class="btn btn-primary btn-lg btn-block">Shop Shin Gi Tai</a>
-						</div>
-					</div>
-				</article>
-
-																<article class="news-item show-more-item" style="display: none;" data-category="food ef">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(http://tribenative.com/wp-content/uploads/2016/12/Ceylon-Arrak-3.jpg);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #000;" src="img/native.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Native Bar</h4>
-							<p class="card-text">Cocktails</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.instagram.com/nativebarsg/?hl=en" class="btn btn-primary btn-lg btn-block">Shop Native Bar</a>
-						</div>
-					</div>
-				</article>
-
-				<article class="news-item show-more-item" style="display: none;" data-category="food">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://kopiandtarts.com.sg/image/catalog/Banner/Egg%20Tarts%20Banner.jpg);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #000;" src="https://kopiandtarts.com.sg//image/catalog/general/round-logo.png" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Kopi & Tarts (HALAL)</h4>
-							<p class="card-text">Freshly baked food and brewed coffee</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.kopiandtarts.com.sg" class="btn btn-primary btn-lg btn-block">Shop Kopi & Tarts</a>
-						</div>
-					</div>
-				</article>
-
-
-				<article class="news-item show-more-item" style="display: none;" data-category="pets">
-					<div class="card card-custom bg-white border-white border-0">
-						<div class="card-custom-img" style="background-image: url(https://catsmart.com.sg/image/catalog/aboutusbannerA.jpg);"></div>
-						<div class="card-custom-avatar">
-							<img class="img-fluid" style="background-color: #000;" src="data:image/png;base64,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" alt="Avatar" />
-						</div>
-						<div class="card-body" style="overflow-y: auto">
-							<h4 class="card-title">Catsmart</h4>
-							<p class="card-text">Pet supplies for cats</p>
-						</div>
-						<div class="card-footer" style="background: inherit; border-color: inherit;">
-							<a target=”_blank” href="https://www.kopiandtarts.com.sg" class="btn btn-primary btn-lg btn-block">Shop Catsmart</a>
-						</div>
-					</div>
-				</article>
-
-				<div class="col text-center">
-				<div class="show-more-btn btn btn-outline-primary btn-lg mt-5 text-center">Load More</div>
-			</div>
+<div class="card pets card-custom bg-white border-white border-0" style="margin: 1.5rem;" data-category="transition">
+	<div class="card-custom-img" style="background-image: url(https://catsmart.com.sg/image/catalog/aboutusbannerA.jpg);"></div>
+	<div class="card-custom-avatar">
+		<img class="img-fluid" style="background-color: #FFF;" src="data:image/png;base64,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" alt="Avatar" />
+	</div>
+	<div class="card-body" style="overflow-y: auto">
+		<h4 class="card-title">Catsmart</h4>
+		<p class="card-text">Pet supplies for cats</p>
+	</div>
+	<div class="card-footer" style="background: inherit; border-color: inherit;">
+		<a target=”_blank” href="https://catsmart.com.sg/" class="btn btn-primary btn-lg btn-block">Shop</a>
+	</div>
 </div>
- </section>
+
+</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small blue m-5">

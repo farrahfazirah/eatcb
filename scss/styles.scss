@@ -4,6 +4,19 @@ $font-family:  'Inter', sans-serif;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+.alignment {
+      -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+        -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+        -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1rem !important;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #61BFAD;
@@ -44,7 +57,7 @@ $font-family:  'Inter', sans-serif;
 .btn-outline-primary {
   color: #61BFAD;
   background-color: transparent;
-  border-color: transparent;
+  border-color: #61BFAD;
 }
 
 .btn-outline-primary:hover {
@@ -54,26 +67,14 @@ $font-family:  'Inter', sans-serif;
 }
 
 .btn-outline-primary:focus, .btn-primary.focus {
-  color: #FFF;
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
-
-.btn-outline-primary.disabled, .btn-primary:disabled {
-  color: #FFF;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  color: #FFF;
+color: #FFF;
   background-color: #61BFAD;
-  border-color: #61BFAD;
+  border-color: transparent;
+  outline: none;
 }
 
  .card-custom {
+  
   overflow: hidden;
   min-height: 300px;
   box-shadow: 0 0 7px rgba(10, 10, 10, 0.1);
@@ -118,37 +119,7 @@ $font-family:  'Inter', sans-serif;
   height: 100px;
 }
 
-select {
-  height: 50px;
-  width: 500px;
-  border-color: #838383;
-}
-@media (max-width: 767px) {
-  select {
-        width: 200px;
-        height: 30px;
-        padding: 3px;
-    }
-}
 
-select:focus {
-  outline:0;
-}
-
-
-
-article {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-        -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-        -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 1rem !important;
-}
 
 .jumbotron {
   padding: 1.5rem 1rem;
@@ -168,3 +139,10 @@ article {
   padding-left: 0;
   border-radius: 0;
 }
+
+
+
+/* ---- isotope ---- */
+
+
+  
